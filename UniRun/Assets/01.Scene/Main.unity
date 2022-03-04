@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 160117534}
   - component: {fileID: 160117536}
   - component: {fileID: 160117535}
+  - component: {fileID: 160117537}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -361,6 +362,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &160117537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160117530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee926419bf8ff04b9a1de02d37d9c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathClip: {fileID: 8300000, guid: 668a107660fa54fe98e03b698a09aa49, type: 3}
+  jumpForse: 700
 --- !u!1 &1609532915
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +388,7 @@ GameObject:
   - component: {fileID: 1609532916}
   m_Layer: 0
   m_Name: deadzone
-  m_TagString: Untagged
+  m_TagString: Dead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
