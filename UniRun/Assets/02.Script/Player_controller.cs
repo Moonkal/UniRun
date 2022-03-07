@@ -127,5 +127,14 @@ public class Player_controller : MonoBehaviour
        
 
 
+
     }
+    //Ãæµ¹ À¯´ÏÆ¼ Ãæµ¹ ´Ù¾çÈ÷ »ç¿ë
+    // ­w¤·µ¹ Å©°Ô µÎ°¡Áö·Î ³ª´®
+    //1.Oncollider¤¡°è¿µ¤© enter stay exit
+    //2.ontirigger°è¿­  enter stay exit
+
+    // OnCollision °è¿­Àº µÎ ÄÝ¶óÀÌ´õ ³¢¸®ÀÇ Ãæµ¹¿¡¼­ 
+    //´ÜÇÏ³ªµµ istrigger°¡ Ã¼Å©°¡ µÇ¤Ó¾î ÀÖÁö ¾ÊÀº °æ¿ì 
+    //ontrigger r°è¿­Àº ´ÜÇÏ³ª¶óµµ istrigger°¡ Ã¼Å©µÇ¾î ÀÖÀ» ¶§ »ç¿ë
 }
