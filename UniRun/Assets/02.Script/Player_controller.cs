@@ -122,15 +122,21 @@ public class Player_controller : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Æ®¸®°Å Äİ¶óÀÌ´õ¸¦ °¡Áø Àå¾Ö¹°°úÀÇ Ãæµ¹ °¨Áö
-        if (collision.tag == "Dead" && !isDead) {
+        if (collision.tag == "Dead" && !isDead)
+        {
             Die();
         }
+        else if (collision.tag == "Spark" && !isDead) {
+
+            if (GameManager.Instanse.crash() == true) Die();
+
+        }
         //Ãæµ¹ÇÑ »ó´ë¹æÀÇ ÅÂ±×°¡ deadÀÎ°¡¿ä?
-       
 
 
 
     }
+    
     //Ãæµ¹ À¯´ÏÆ¼ Ãæµ¹ ´Ù¾çÈ÷ »ç¿ë
     // ­w¤·µ¹ Å©°Ô µÎ°¡Áö·Î ³ª´®
     //1.Oncollider¤¡°è¿µ¤© enter stay exit

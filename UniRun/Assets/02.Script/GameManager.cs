@@ -21,6 +21,13 @@ public class GameManager : MonoBehaviour
 
     private int score = 0;//게임 점수
     //게임 시작과 동시에 싱글턴을 구성
+
+
+
+        public GameObject menuPanel;
+    public int hpCount = 2;// 실제 사용자 생명력 
+    public Text hpText;//사용자에게 보여질 생명력 UI
+    
     private void Awake()
     {
         //싱글턴 인스턴스 가 비어 있나요?
@@ -43,7 +50,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    private void Start()
+    {
+        //사용자에게 보여질 생명력을 실제 생명력으로 등록
+        hpText.text = hpCount.ToString();
+    }
     // 게임 오버 상태에서 게임을 재시작할 수 있게 처리
     void Update()
     {
@@ -79,5 +90,42 @@ public class GameManager : MonoBehaviour
 
         //게임 버튼 활성화
         
-    } 
+    }
+
+
+    public void Onmenu() {
+
+        menuPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void Offmenu() {
+        menuPanel.SetActive(false);
+        Time.timeScale = 1f;
+
+
+    }
+
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+    
+    public void ReStrat() {
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Time.timeScale = 1f;
+                }
+
+    public bool crash() {
+
+
+
+        hpText.text = "" + --hpCount;
+
+        if (hpCount <= 0) return true;
+        return false;
+
+    }
 }
